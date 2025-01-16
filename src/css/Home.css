@@ -281,7 +281,7 @@
 
 @media screen and (max-width: 768px) {
   body{
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .recommendation, .actor, .todaytop {
     width: 100%;
@@ -345,7 +345,7 @@
 
 @media screen and (max-width: 480px) {
   body{
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .recommendation, .actor, .todaytop {
@@ -409,7 +409,7 @@
 
 @media screen and (max-width: 300px) {
   body{
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .recommendation, .actor, .todaytop {
     width: 100%;

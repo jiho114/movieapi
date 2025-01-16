@@ -46,6 +46,11 @@ const Recommendation = () => {
             },
             480: {
               slidesPerView: 1
+            },
+            300: {
+              slidesPerView: 1
+            }, 200: {
+              slidesPerView: 1
             }
           }}
         >

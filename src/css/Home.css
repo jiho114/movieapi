@@ -318,7 +318,7 @@
   }
 
   .todaytopSwiperContainer > h1 {
-    left:95px;
+    left:24%;
   }
 
 
@@ -339,18 +339,101 @@
   }
 }
 
-/* 화면 너비가 480px 이하일 때 */
+
 @media screen and (max-width: 480px) {
-  .recommendationSlideBox, .actorSlideBox, .todaytopSlideBox {
-    width: 100%;
-    height: auto;
-  }
-
-  .recommendationSlideTxtBox, .actorSlideTxtBox, .todaytopSlideTxtBox {
-    padding-left: 10px;
-  }
-
-  .footer {
+  .recommendation, .actor, .todaytop {
     width: 100%;
   }
+  
+  .recommendation h2, .actor h2, .todaytop h2 {
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+  .recommendationSlideBox, .todaytopSlideBox {
+    width:300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .todaytopSlideBox img{
+    width:300px;
+  }
+
+  .recommendation .swiper-button-prev{
+    left:160px;
+    top:-69px;
+  }
+  
+  .recommendation .swiper-button-next{
+    left: 200px;
+    top:-69px;
+  }
+
+  .actor .swiper-button-prev{
+    left:320px;
+    top:-69px;
+  }
+  
+  .actor .swiper-button-next{
+    left: 360px;
+    top:-69px;
+  }
+
+  .todaytop  .swiper-button-prev{
+    left:170px;
+    top:-69px;
+  }
+  
+  .todaytop  .swiper-button-next{
+    left: 210px;
+    top:-69px;
+  }
+
+  .recommendationSlideTxtBox h3, .actorSlideBox h3, .todaytopSlideTxtBox h3{
+    font-size: 18px;
+  }
+
+  .todaytopSwiperContainer > h1 {
+    left:13%;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+  .recommendation, .actor, .todaytop {
+    width: 100%;
+  }
+  
+  .recommendation h2, .actor h2, .todaytop h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .recommendationSlideBox, .todaytopSlideBox {
+    width:300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .todaytopSlideBox img{
+    width:300px;
+  }
+
+  .recommendation .swiper-button-prev,  .actor .swiper-button-prev,   .todaytop  .swiper-button-prev{
+    left:60px;
+    top:-30px;
+  }
+  
+  .recommendation .swiper-button-next,   .actor .swiper-button-next,   .todaytop  .swiper-button-next{
+    left: 210px;
+    top:-30px;
+  }
+
+  .todaytopSwiperContainer > h1 {
+    left:50%;
+    top:-21%;
+    font-size:40px;
+  }
+
 }

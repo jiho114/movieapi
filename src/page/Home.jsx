@@ -45,6 +45,11 @@ const Home = () => {
           480: {
             slidesPerView: 1,
           },
+          300: {
+            slidesPerView: 1
+          }, 200: {
+            slidesPerView: 1
+          }
         }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}

@@ -42,7 +42,10 @@ const Recommendation = () => {
               slidesPerView: 4,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 3,
+            },
+            480: {
+              slidesPerView: 1
             }
           }}
         >

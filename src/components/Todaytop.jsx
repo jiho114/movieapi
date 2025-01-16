@@ -7,8 +7,6 @@ import "../css/Home.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 const Todaytop = () => {
   const { movies } = useContext(MovieContext);
@@ -26,6 +24,17 @@ const Todaytop = () => {
         spaceBetween={25}
         slidesPerView={4}
         navigation
+        breakpoints={{
+          1024: {
+            slidesPerView: 4,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          480: {
+            slidesPerView: 1
+          }
+        }}
        >
       {sliceMovie.map((item, idx) => (
          <SwiperSlide key={idx} className="todaytopSwiperContainer">

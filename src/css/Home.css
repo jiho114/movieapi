@@ -279,13 +279,78 @@
 
 /* 반응형 제작 */
 
-@media screen and (max-width:768px) {
-  .Swiper {
+@media screen and (max-width: 768px) {
+  .recommendation, .actor, .todaytop {
     width: 100%;
   }
+
+  .recommendation .storeSwiper {
+    display: block;
+  }
+
+  .recommendation h2, .actor h2, .todaytop h2 {
+    margin-left: 30px;
+  }
+
+  .recommendationSlideBox, .todaytopSlideBox {
+    width:300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .todaytopSlideBox img{
+    width:300px;
+  }
+
+  .recommendation .swiper-button-prev{
+    left: 190px;
+  }
+  
+  .recommendation .swiper-button-next{
+    left: 260px;
+  }
+  .recommendationSlideTxtBox, .actorSlideTxtBox, .todaytopSlideTxtBox{
+    text-align: center;
+  }
+
+  .recommendationSlideTxtBox h3, .actorSlideBox h3, .todaytopSlideTxtBox h3{
+    font-size: 28px;
+  }
+
+  .todaytopSwiperContainer > h1 {
+    left:95px;
+  }
+
+
+  .homeSlideBox img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
-@media screen and (max-width:480px) {
-  .Swiper {
+
+/* 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .recommendationSlideBox, .actorSlideBox, .todaytopSlideBox {
+    width: 100%;
+    height: auto;
+  }
+
+  .recommendationSlideTxtBox, .actorSlideTxtBox, .todaytopSlideTxtBox {
+    padding-left: 10px;
+  }
+
+  .footer {
     width: 100%;
   }
 }

@@ -40,6 +40,17 @@ const Actor = ({ actorData }) => {
         spaceBetween={25}
         slidesPerView={4}
         navigation
+        breakpoints={{
+          1024: {
+            slidesPerView: 4,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          480: {
+            slidesPerView: 1
+          }
+        }}
       >
         {actors.map((item, idx) => (
           <SwiperSlide key={idx} className="actorSwiperContainer">

@@ -35,6 +35,17 @@ const Home = () => {
           delay: 5000, // 3초마다 자동으로 슬라이드 변경
           disableOnInteraction: false, // 사용자가 슬라이드를 조작한 후에도 autoplay 유지
         }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          480: {
+            slidesPerView: 1,
+          },
+        }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >

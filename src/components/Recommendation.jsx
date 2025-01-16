@@ -37,6 +37,14 @@ const Recommendation = () => {
           spaceBetween={25}
           slidesPerView={4}
           navigation
+          breakpoints={{
+            1024: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 2,
+            }
+          }}
         >
           {recSlide.map((item, idx) => (
             <SwiperSlide

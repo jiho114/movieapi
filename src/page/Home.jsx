@@ -47,7 +47,7 @@ const Home = () => {
               />
             </div>
             <div className="homeSlideTxtBox">
-              <h2>{item.title ? item.title : "Movie"}</h2>
+              <h2>{item.title ? item.title : item.name}</h2>
               <p>{item.release_date ? item.release_date : "2025-01-15"}</p>
               <div className="average">
                 <IoIosStar />

@@ -28,6 +28,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   justify-content: center; /* 이미지 박스를 중앙에 배치 */
+  cursor: pointer;
 }
 
 /* 슬라이드 활성화 스타일 */
@@ -130,6 +131,7 @@
   box-sizing: border-box;
   transition: all .5s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .actorSlideBox{
@@ -139,6 +141,7 @@
   box-sizing: border-box;
   transition: all .5s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .actorSlideBox .actorImgBox{

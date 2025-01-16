@@ -280,7 +280,7 @@
 /* 반응형 제작 */
 
 @media screen and (max-width: 768px) {
-  body{
+  html,body{
     overflow-x: hidden;
   }
   .recommendation, .actor, .todaytop {
@@ -344,7 +344,7 @@
 
 
 @media screen and (max-width: 480px) {
-  body{
+  html,body{
     overflow-x: hidden;
   }
 
@@ -408,7 +408,7 @@
 }
 
 @media screen and (max-width: 300px) {
-  body{
+  html,body{
     overflow-x: hidden;
   }
   .recommendation, .actor, .todaytop {

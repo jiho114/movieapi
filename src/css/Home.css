@@ -278,3 +278,14 @@
 }
 
 /* 반응형 제작 */
+
+@media screen and (max-width:768px) {
+  .Swiper {
+    width: 100%;
+  }
+}
+@media screen and (max-width:480px) {
+  .Swiper {
+    width: 100%;
+  }
+}

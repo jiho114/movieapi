@@ -1,10 +1,11 @@
+.nav{
+  padding-left: 30px;
+  color: #fff;
+  margin: 20px 0;
+}
 .home {
   width: 100%;
   position: relative;
-}
-
-.SwiperSlide{
-  margin-top: 100px;
 }
 
 .swiper-container {
@@ -22,7 +23,7 @@
 .homeSlideBox {
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius:0px 0px 5px 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -91,11 +92,184 @@
   color: #ffd700; /* 별점 색 */
 }
 
-/* Swiper 내비게이션 버튼 스타일 */
-.swiper-button-prev, .swiper-button-next{
-  color: #ccc;
+.recommendation, .actor, .todaytop{
+  width:1280px;
+  margin: 0 auto;
+  position: relative;
 }
-/* 마지막 슬라이드의 오른쪽 여백 제거 */
-.swiper-slide:last-child {
-  margin-right: 0;
+
+.Swiper{
+  overflow: visible;
+}
+
+.recommendation h2, .actor h2, .todaytop h2{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.recommendation .storeSwiper {
+  display: flex;
+  justify-content: space-around; /* 가로 가운데 정렬 */
+  align-items: center;    /* 세로 가운데 정렬 */
+}
+
+.recommendation .Swiper, .actor .Swiper, .todaytop .SwiperSlide {
+  width: 100%; /* 원하는 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  height:350px;
+}
+
+
+.recommendationSlideBox, .todaytopSlideBox{
+  width:278px;
+  height:306px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.actorSlideBox{
+  width:200px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.actorSlideBox .actorImgBox{
+  width:100%;
+  height:200px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.recommendationSlideBox:hover, .actorSlideBox:hover {
+  scale: 1.2;
+  transition: all .5s;
+}
+
+.recommendationSwiperContainer .recommendationSlideBox >img, .todaytopSlideBox > img{
+  width:278px;
+  height:153px;
+}
+
+.todaytopSwiperContainer{
+  position: relative;
+}
+
+.todaytopSwiperContainer > h1{
+  position: absolute;
+  z-index: 999;
+  top:-40px;
+  left: -10px;
+  color: #fff;
+  font-size:60px;
+  font-style: italic;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.recommendationSlideTxtBox, .todaytopSlideTxtBox{
+  width:100%;
+  height:50%;
+  margin-top: 15px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+}
+
+.actorSlideTxtBox{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.recommendationSlideTxtBox h3, .actorSlideTxtBox h3, .todaytopSlideTxtBox h3{
+  font-size: 17px;
+  color: #fff;
+}
+
+.actorSlideTxtBox p {
+  font-size: 13px;
+  color: #fff;
+}
+
+.recommendationSlideTxtBox span, .actorSlideTxtBox span, .todaytopSlideTxtBox span{
+  font-size: 13px;
+  color: #535353;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  width:30px;
+  height:30px;
+  position: absolute;
+  top:-70px;
+}
+
+.actor .swiper-button-prev, .swiper-button-next{
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  position: absolute;
+  top:-70px;
+}
+
+.recommendation .swiper-button-prev{
+  left: 170px;
+}
+
+.recommendation .swiper-button-next{
+  left: 230px;
+}
+
+.actor .swiper-button-prev{
+  left:370px;
+}
+
+.actor .swiper-button-next{
+  left: 430px;
+}
+
+.todaytop .swiper-button-prev{
+  left:200px;
+}
+
+.todaytop .swiper-button-next{
+  left: 260px;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  color: #535353;
+  font-size:18px;
+}
+
+.footer{
+  margin-top: 50px;
+  width:100%;
+  height:80px;
+  border-top: 1px solid #242424;
+  padding:0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.footer ul{
+  width:100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.footer ul li{
+  color: #c5c5c5;
+  font-size: 12px;
 }

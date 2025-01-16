@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Recommendation from "../components/Recommendation";
+import Actor from "../components/Actor";
+import Todaytop from "../components/Todaytop";
 import { IoIosStar } from "react-icons/io";
 import { MovieContext } from "../context/MovieContext";
 
@@ -19,6 +21,8 @@ const Home = () => {
   console.log(movies);
 
   const sliceHomeSlide = movies.slice(0, 10);
+
+  const actorData = [{id:93405, title: "오징어게임 배우 출연작 보러가기" },{id:278877, title: "전세계 열풍 지금 뜨는 해외 스타들"}]
   return (
     <div className="home">
       <Swiper
@@ -54,6 +58,9 @@ const Home = () => {
         ))}
       </Swiper>
       <Recommendation></Recommendation>
+      <Actor actorData ={actorData[0]}></Actor>
+      <Todaytop></Todaytop>
+      <Actor actorData ={actorData[1]}></Actor>
     </div>
   );
 };

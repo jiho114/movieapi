@@ -21,7 +21,7 @@ const Home = () => {
   const { movies } = useContext(MovieContext);
   console.log(movies);
 
-  const sliceHomeSlide = movies.slice(10, 19);
+  const sliceHomeSlide = movies.slice(1, 11);
 
   const actorData = [
     { id: 93405, title: "오징어게임 배우 출연작 보러가기" },

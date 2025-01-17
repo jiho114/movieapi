@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import Recommendation from "../components/Recommendation";
 import Actor from "../components/Actor";
 import Todaytop from "../components/Todaytop";
@@ -22,13 +23,16 @@ const Home = () => {
 
   const sliceHomeSlide = movies.slice(0, 10);
 
-  const actorData = [{id:93405, title: "오징어게임 배우 출연작 보러가기" },{id:278877, title: "전세계 열풍 지금 뜨는 해외 스타들"}]
+  const actorData = [
+    { id: 93405, title: "오징어게임 배우 출연작 보러가기" },
+    { id: 278877, title: "전세계 열풍 지금 뜨는 해외 스타들" },
+  ];
   return (
     <div className="home">
       <Swiper
         // install Swiper modules
         className="SwiperSlide"
-        modules={[A11y, Autoplay ]}
+        modules={[A11y, Autoplay]}
         spaceBetween={5}
         slidesPerView={3}
         autoplay={{
@@ -46,10 +50,11 @@ const Home = () => {
             slidesPerView: 1,
           },
           300: {
-            slidesPerView: 1
-          }, 200: {
-            slidesPerView: 1
-          }
+            slidesPerView: 1,
+          },
+          200: {
+            slidesPerView: 1,
+          },
         }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
@@ -57,10 +62,12 @@ const Home = () => {
         {sliceHomeSlide.map((item, idx) => (
           <SwiperSlide key={idx} className="homeSlideBox">
             <div className="homeSlideImgBox">
-              <img
-                src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-                alt={item.title}
-              />
+              <Link to={`/movie/${item.id}`} key={item.id}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
+                  alt={item.title}
+                />
+              </Link>
             </div>
             <div className="homeSlideTxtBox">
               <h2>{item.title ? item.title : item.name}</h2>
@@ -74,9 +81,9 @@ const Home = () => {
         ))}
       </Swiper>
       <Recommendation></Recommendation>
-      <Actor actorData ={actorData[0]}></Actor>
+      <Actor actorData={actorData[0]}></Actor>
       <Todaytop></Todaytop>
-      <Actor actorData ={actorData[1]}></Actor>
+      <Actor actorData={actorData[1]}></Actor>
     </div>
   );
 };

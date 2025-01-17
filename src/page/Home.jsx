@@ -21,7 +21,7 @@ const Home = () => {
   const { movies } = useContext(MovieContext);
   console.log(movies);
 
-  const sliceHomeSlide = movies.slice(0, 10);
+  const sliceHomeSlide = movies.slice(10, 19);
 
   const actorData = [
     { id: 93405, title: "오징어게임 배우 출연작 보러가기" },
@@ -62,7 +62,7 @@ const Home = () => {
         {sliceHomeSlide.map((item, idx) => (
           <SwiperSlide key={idx} className="homeSlideBox">
             <div className="homeSlideImgBox">
-              <Link to={`/movie/${item.id}`} key={item.id}>
+              <Link to={`/${item.media_type}/${item.id}`} key={item.id}>
                 <img
                   src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
                   alt={item.title}

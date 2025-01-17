@@ -1,3 +1,5 @@
+a{text-decoration: none; color:inherit}
+
 .nav{
   padding-left: 30px;
   color: #fff;
@@ -160,8 +162,8 @@
   transition: all .5s;
 }
 
-.recommendationSwiperContainer .recommendationSlideBox >img, .todaytopSlideBox > img{
-  width:278px;
+.recommendationSwiperContainer .recommendationSlideBox a >img, .todaytopSlideBox a > img{
+  width:278px; 
   height:153px;
 }
 

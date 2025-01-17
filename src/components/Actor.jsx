@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import "swiper/css";
@@ -61,6 +62,7 @@ const Actor = ({ actorData }) => {
           <SwiperSlide key={idx} className="actorSwiperContainer">
             <div className="actorSlideBox">
               <div className="actorImgBox">
+                <Link to={`/actor/${item.id}`}>
               <img
                 src={
                   item.profile_path
@@ -69,6 +71,7 @@ const Actor = ({ actorData }) => {
                 }
                 alt={item.name}
               />
+              </Link>
               </div>
               <div className="actorSlideTxtBox">
                 <h3>{item.name}</h3>

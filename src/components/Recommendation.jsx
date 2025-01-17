@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -60,7 +60,9 @@ const Recommendation = () => {
               className="recommendationSwiperContainer"
             >
               <div className="recommendationSlideBox">
+              <Link to={`/${item.media_type}/${item.id}`} key={item.id}>
                 <img src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt={item.id} />
+                </Link>
                 <div className="recommendationSlideTxtBox">
                   <h3>{item.name}</h3>
                   <span>{item.media_type === "tv" ? "TV" : "Movie"}</span>

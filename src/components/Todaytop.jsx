@@ -12,8 +12,6 @@ const Todaytop = () => {
   const { movies } = useContext(MovieContext);
   const sliceMovie = movies.slice(0, 20);
 
-  console.log(sliceMovie);
-
   return (
     <div className="todaytop">
       <h2>오늘의 TOP 20</h2>

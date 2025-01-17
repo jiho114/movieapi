@@ -19,7 +19,6 @@ import "swiper/css/scrollbar";
 
 const Home = () => {
   const { movies } = useContext(MovieContext);
-  console.log(movies);
 
   const sliceHomeSlide = movies.slice(1, 11);
 

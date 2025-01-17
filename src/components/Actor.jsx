@@ -30,7 +30,6 @@ const Actor = ({ actorData }) => {
     fetchActors();
   }, [API_KEY]);
 
-  console.log(actors)
   return (
     <div className="actor">
       <h2>{actorData.title}</h2>

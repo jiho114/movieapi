@@ -2,7 +2,8 @@ import { useState, useEffect, act } from "react";
 import { useParams } from "react-router-dom";
 import { IoIosStar } from "react-icons/io";
 import axios from "axios";
-import '../css/MovieDetail.css'
+import { Link } from "react-router-dom";
+import "../css/MovieDetail.css";
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -56,8 +57,6 @@ const MovieDetail = () => {
     fetchContent();
   }, [id]);
 
-  console.log(actors);
-
   if (!content) return <div>영화 데이터를 불러오는 중입니다.</div>;
 
   return (
@@ -71,7 +70,18 @@ const MovieDetail = () => {
               alt={content.title || content.name}
             />
           ) : (
-            <div style={{color:"#535353", fontSize:"24px", display:"flex", alignItems:"center", justifyContent:"center", height:"100%"}}>해당 컨텐츠의 이미지가 없습니다.</div>
+            <div
+              style={{
+                color: "#535353",
+                fontSize: "24px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100%",
+              }}
+            >
+              해당 컨텐츠의 이미지가 없습니다.
+            </div>
           )}
         </div>
         <div className="moviedetailTxtBox">
@@ -98,11 +108,13 @@ const MovieDetail = () => {
             .slice(0, 8) // 상위 5명만 표시
             .map((actor) => (
               <li key={actor.id}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
-                  alt={actor.name}
-                  style={{ width: 100, height: 150 }}
-                />
+                <Link to={`/actor/${actor.id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
+                    alt={actor.name}
+                    style={{ width: 100, height: 150 }}
+                  />
+                </Link>
                 <p>{actor.name}</p>
               </li>
             ))}

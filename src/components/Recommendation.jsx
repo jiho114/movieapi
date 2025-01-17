@@ -25,8 +25,7 @@ const Recommendation = () => {
     };
     fetchMovies();
   }, [API_KEY]);
-
-  console.log(tv)
+  
   return (
     <div className='recommendation'>
       <h2>오늘의 추천작</h2>

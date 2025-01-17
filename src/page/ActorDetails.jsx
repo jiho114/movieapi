@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { IoIosStar } from "react-icons/io";
 import axios from "axios";
-import '../css/ActorDetails.css'
+import { Link } from "react-router-dom";
+import "../css/ActorDetails.css";
 
 const ActorDetails = () => {
   const { actorId } = useParams(); // URL 파라미터에서 actorId 받기
@@ -39,7 +40,6 @@ const ActorDetails = () => {
   }, [actorId]); // actorId가 바뀔 때마다 재호출
 
   if (!actorDetails) return <div>배우 정보를 불러오는 중...</div>;
-  console.log(actorDetails);
 
   return (
     <div className="actordetails">
@@ -58,16 +58,18 @@ const ActorDetails = () => {
         <div className="actordetailsTxtndRe">
           <div className="actordetailsRe">
             <ul>
-              {knownFor.slice(0,10).map((movie) => (
+              {knownFor.slice(0, 10).map((movie) => (
                 <li key={movie.id}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                    alt={movie.title}
-                  />
+                  <Link to={`/${movie.media_type}/${movie.id}`} key={movie.id}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                  </Link>
                   <p>{movie.title}</p>
                   <div className="average">
-                   <IoIosStar></IoIosStar>
-                   <p>{movie.vote_average}</p>
+                    <IoIosStar></IoIosStar>
+                    <p>{movie.vote_average}</p>
                   </div>
                 </li>
               ))}

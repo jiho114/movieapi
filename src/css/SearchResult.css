@@ -1,0 +1,120 @@
+/* SearchResult.css */
+
+/* SearchResult 컴포넌트의 최상위 컨테이너 스타일 */
+.searchResult {
+  padding: 40px;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* 어두운 배경 */
+  color: #e0e0e0; /* 밝은 텍스트 색상 */
+  border-radius: 12px;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.searchResult:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 강조 */
+}
+
+/* 검색 결과 제목 스타일 */
+.searchResult h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f1f1f1;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #555;
+  padding-bottom: 15px;
+}
+
+/* 에러 메시지 스타일 */
+.searchResult p {
+  color: #e74c3c; /* 빨간색 */
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* 영화 리스트 스타일 */
+.searchReultUl {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchReultUl li {
+  background-color: #1c1c1c; /* 어두운 회색 배경 */
+  border: 1px solid #333;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.searchReultUl li:hover {
+  background-color: #333; /* 호버 시 배경 밝게 */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 영화 제목 스타일 */
+.searchResultLi h3 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+  color: #f1f1f1;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* 텍스트 그림자 */
+}
+
+/* 영화 평점 스타일 */
+.searchResultLi p {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #bbb; /* 회색 */
+}
+
+/* 영화 포스터 이미지 스타일 */
+.searchResultLi img {
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.searchResultLi img:hover {
+  transform: scale(1.05); /* 포스터에 호버 효과 */
+}
+
+/* 포스터가 없을 경우 텍스트 스타일 */
+.searchResultLi p.no-poster {
+  font-size: 14px;
+  color: #888;
+  margin-left: 20px;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 세부적인 마진/패딩 설정 */
+.searchResultLi {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 텍스트 효과와 레이아웃 개선 */
+.searchReultUl li p,
+.searchReultUl li h3 {
+  word-wrap: break-word;
+  max-width: 85%; /* 긴 제목이 자를 때 여유 공간 제공 */
+}

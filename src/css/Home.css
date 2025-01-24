@@ -1,10 +1,41 @@
 a{text-decoration: none; color:inherit}
 
 .nav{
-  padding-left: 30px;
+  padding:0 30px;
   color: #fff;
   margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.searchbar{
+  display: flex;
+  gap: 20px;
+  align-items:center;
+}
+
+.searchbar .icon{
+  font-size:20px;
+}
+
+.searchbar input {
+  width:200px;
+  height:25px;
+  background-color: transparent;
+  border: 1px solid #535353;
+  border-radius: 5px;
+  transition: all .5s;
+  box-sizing: border-box;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.searchbar input:focus{
+  padding-left: 10px;
+  transition: all .5s;
+}
+
 .home {
   width: 100%;
   position: relative;

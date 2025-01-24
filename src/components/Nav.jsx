@@ -11,6 +11,7 @@ const Nav = () => {
     if (query.trim()) {
       // 검색어가 입력된 경우 검색 결과 페이지로 이동
       navigate(`/search?query=${encodeURIComponent(query)}`);
+      setQuery("");
     } else {
       alert("검색어를 입력해주세요."); // 검색어가 없을 경우 알림
     }
